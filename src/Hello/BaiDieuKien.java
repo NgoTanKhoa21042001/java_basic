@@ -4,21 +4,36 @@ import java.util.Scanner;
 
 public class BaiDieuKien {
 	public static void main(String[] args) {
-//		- dưới 10M: không đóng thuế
-//		- từ 10M tới 15M: thuế 10%
-//		- từ 15 tới 30M : thuế 20%
-//		- trên 30M: thuế 50%
+//		System.out.println(">> LỰA CHỌN TÍNH NĂNG <<");
+		System.out.println("++ ------------------ ++");
+		System.out.println("| 1. Cộng |");
+		System.out.println("| 2. Trừ |");
+		System.out.println("| 3. Kết thúc |");
+		System.out.println("++ ------------------ ++");
+
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Nhập vào tax = ");
-		int tax = scanner.nextInt();
-		if (tax < 10) {
-			System.out.println("Không đóng thuế");
-		} else if (tax >= 10 && tax <= 15) {
-			System.out.println("Thuế 10%");
-		} else if (tax >= 15 && tax <= 30) {
-			System.out.println("Thuế 20%");
-		} else {
-			System.out.println("Thuế 50%");
+		System.out.println("Lựa chọn của bạn là : ");
+
+		int value = scanner.nextInt();
+
+		switch (value) {
+		case 1: {
+			System.out.println("Bạn lựa chọn phép cộng");
+			break;
 		}
+
+		case 2: {
+			System.out.println("Bạn lựa chọn phép trừ");
+			break;
+		}
+
+		default:
+			System.out.println("Bạn đã lựa chọn thoát chương trình");
+			System.exit(0);
+
+		}
+
+		scanner.close();
+
 	}
 }
